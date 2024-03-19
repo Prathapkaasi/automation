@@ -2,7 +2,13 @@ import streamlit as st
 import requests
 import pandas as pd
 
-
+hide_style = """
+    <style>
+    #MainMenu {visibility:hidden}
+    footer {visibility: hidden  }
+    </style>
+"""
+st.markdown(hide_style, unsafe_allow_html=True)
 st.set_page_config(page_title="cheran_app",layout="wide", page_icon="🅿️" )
 st.header("Dashboard")
 st.write("this is some text")
