@@ -11,5 +11,8 @@ data = res.json()
 df = pd.DataFrame(data)
 st.dataframe(df)
 
+grouped_data = df.groupby("category")["price"].sum()
+
 st.header("hi sona this is prathap")
 st.write("hey there sona!!!!! i love you")
+st.bar_chart(data=grouped_data,height=200,width=200,use_container_width=True)
