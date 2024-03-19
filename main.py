@@ -3,7 +3,6 @@ import requests
 import pandas as pd
 
 
-st.set_page_config(hide_streamlit_style=True)
 st.set_page_config(page_title="cheran_app",layout="wide", page_icon="🅿️" )
 st.header("Dashboard")
 st.write("this is some text")
