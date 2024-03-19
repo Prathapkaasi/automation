@@ -12,7 +12,7 @@ with col1:
 with col2:
     st.metric("Value2", 546456)
 with col3:
-    st.metric("Value3", 78678)
+    st.metric("Value3", 7868)
 
 res = requests.get("https://fakestoreapi.com/products")
 data = res.json()
