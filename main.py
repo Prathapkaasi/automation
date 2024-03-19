@@ -12,3 +12,4 @@ df = pd.DataFrame(data)
 st.dataframe(df)
 
 st.header("hi sona this is prathap")
+st.write("hey there sona!!!!! i love you")
