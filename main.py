@@ -23,4 +23,5 @@ st.write(time_until_midnight)
 
 st.header("hello there")
 st.bar_chart(grouped_data, width=200,height=200)
+st.dataframe(df)
 
