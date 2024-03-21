@@ -1,28 +1,21 @@
 import streamlit as st
 import requests
 import pandas as pd
-
+import datetime
+import time
+from auto_mail import send_mail
 st.set_page_config(page_title="cheran_app", layout="wide", page_icon="🅿️")
-st.header("Dashboard")
-st.write("this is some text")
-st.write("this is automation mail feature available")
-col1, col2, col3 = st.columns(3)
-with col1:
-    st.metric("Value1", 3434)
-with col2:
-    st.metric("Value2", 546456)
-with col3:
-    st.metric("Value3", 7868)
 
-res = requests.get("https://fakestoreapi.com/products")
-data = res.json()
-df = pd.DataFrame(data)
-st.dataframe(df)
+st.header("Wishing Happy Birthday 🎂🎂")
 
-grouped_data = df.groupby("category")["price"].sum()
 
-st.header("hi sona this is prathap")
-st.write("hey there sona!!!!! i love you")
-st.bar_chart(data=grouped_data, height=200, width=200, use_container_width=True)
-# st.balloons()
-st.snow()
+# Calculate time until midnight
+now = datetime.datetime.now()
+midnight = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(days=1)
+time_until_midnight = (midnight - now).seconds
+print(time_until_midnight)
+# Wait until midnight
+# time.sleep(time_until_midnight)
+st.write(time_until_midnight)
+
+
