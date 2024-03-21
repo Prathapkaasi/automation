@@ -8,7 +8,10 @@ st.set_page_config(page_title="cheran_app", layout="wide", page_icon="🅿️")
 
 st.header("Wishing Happy Birthday 🎂🎂")
 
-
+res =  requests.get("https://fakestoreapi.com/products")
+data = res.json()
+df =  pd.DataFrame(data)
+grouped_data = df.groupby("category", as_index=False)["price"].sum()
 # Calculate time until midnight
 now = datetime.datetime.now()
 midnight = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(days=1)
@@ -19,3 +22,5 @@ print(time_until_midnight)
 st.write(time_until_midnight)
 
 st.header("hello there")
+st.bar_chart(grouped_data, width=200,height=200)
+
